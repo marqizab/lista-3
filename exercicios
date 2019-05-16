@@ -1,0 +1,166 @@
+print("Lista #3")
+print("Exercicio #1")
+nome = input("Digite o seu nome: ")
+idade = int(input("Digite a sua idade: "))
+anoAtual = 2019
+anoNascimento = anoAtual - idade
+calculoIdade = anoNascimento + 100
+print(nome + ", você irá fazer 100 anos em ", calculoIdade)
+
+
+# In[84]:
+
+print("Exercicio #2")
+nome = input("Digite o seu nome: ")
+idade = int(input("Digite a sua idade: "))
+qtd = int(input("Quantas vezes você gostaria de imprimir a mensagem? "))
+anoAtual = 2019
+anoNascimento = anoAtual - idade
+calculoIdade = anoNascimento + 100
+while (qtd !=0):
+    print(nome + ", você irá fazer 100 anos em ", calculoIdade)
+    qtd = qtd -1
+
+
+# In[92]:
+
+print("Exercicio #3")
+n = int(input("Digite um numero: "))
+if (n%2 == 0):
+    print("Numero Par")
+else:
+    print("Numero Impar")
+
+
+# In[117]:
+
+print("Exercicio #4")
+numeros = [4,5,6,7,8,-3,9,-4]
+for i in range(len(numeros)):
+    if (numeros[i] < 0):
+        print(numeros[i])
+
+
+# In[110]:
+
+print("Exercicio #5")
+print(list(range(0,101,2)))
+
+
+# In[109]:
+
+print("Exercicio #5")
+for i in range(101):
+    if (i%2 == 0):
+        print(i)
+
+
+# In[176]:
+
+print("Exercicio #6-a")
+lst = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+for i in range(len(lst)):
+    if (lst[i] < 6):
+        print(lst[i])
+
+print("Exercicio #6-a")
+lst = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+for item in lst:
+    if item <= 5:
+        print(item)
+
+
+# In[66]:
+
+print("Exercicio #6-b")
+lst = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+novaLst = []
+for item in lst:
+    if item <= 5:
+        novaLst.append(item)
+print(novaLst)
+
+
+# In[70]:
+
+lista1 = [1, 2, 3]
+lista1.append([4, 5])
+print ("append: ",lista1)
+# resultado: [1, 2, 3, [4, 5]]
+
+lista2 = [1, 2, 3]
+lista2.extend([4, 5])
+print ("extend: ", lista2)
+# resultado: [1, 2, 3, 4, 5]
+
+lista3 = [1, 2, 3]
+lista3.append(4)
+print (lista3)
+
+
+# In[71]:
+
+print("Exercicio #6-c")
+n = int(input("Digite um numero: "))
+lst = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+novaLst = []
+for item in lst:
+    if item <= n:
+        novaLst.append(item)
+print(novaLst)
+
+
+# In[5]:
+
+print("Exercicio #7")
+aparelhos = ['iphone', 'pc', 'notebook', 'monitor', 'impressora']       
+for i, item in enumerate(aparelhos):
+    print(i+1, item)
+    print(' ')
+
+print("Exercicio #7")
+aparelhos = ['iphone', 'pc', 'notebook', 'monitor', 'impressora']       
+for i in range(len(aparelhos)):
+    print(i+1, aparelhos[i])
+    print(' ')
+
+
+# In[98]:
+
+print("Exercicio #8-a")
+l1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+l2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+novaLst = []
+for i in range(len(l1)):
+    for j in range(len(l2)):
+        if (l1[i] == l2[j]) and (l1[i] != l1[i-1]) and (l2[j] != l2[j-1]):
+                novaLst.append(l1[i])
+print(novaLst)
+
+
+# In[99]:
+
+print("Exercicio #8-b")
+l1 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 101, 121, 130, 150]
+l2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 34, 55, 89, 121, 150, 190, 300, 555, 999]
+novaLst = []
+for item in (l2):
+        if item in (l1) and item not in novaLst:
+            novaLst.append(item)
+print(novaLst)
+
+
+# In[82]:
+
+print("Exercicio #9")
+frase = input("Digite uma frase: ")
+dict = {'MAIUSCULA': 0, 'minusculas': 0}
+for i in range(len(frase)):
+    str = frase[i]
+    if (str.isupper()):
+        dict['MAIUSCULA'] = dict['MAIUSCULA'] + 1
+    elif (str.islower()):
+        dict['minusculas'] = dict['minusculas'] + 1
+print("Quantidade de letras MAIÚSCULA: ", dict['MAIUSCULA'])
+print("Quantidade de letras minu´sculas: ", dict['minusculas'])
+
